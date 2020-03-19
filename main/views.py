@@ -13,7 +13,8 @@ from django.views import generic
 
 from .forms import Signup, ReservationForm, CheckInRequestForm
 from .models import Room, Reservation, Customer, Staff  # Import Models
-
+def sum(a,b):
+    return a+b
 
 def index(request):
     """
