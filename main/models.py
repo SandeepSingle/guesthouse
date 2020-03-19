@@ -103,7 +103,7 @@ class Reservation(models.Model):
 class Room(models.Model):
     room_no = models.CharField(max_length=10, primary_key=True)
     room_type = models.ForeignKey('RoomType', null=False, blank=True, on_delete=models.CASCADE)
-    availability = models.BooleanField(default=0)
+    availability = models.BooleanField(default=1)
     reservation = models.ForeignKey(Reservation, null=True, blank=True, on_delete=models.SET_NULL)
 
     class Meta:
